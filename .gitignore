@@ -1,4 +1,9 @@
 /latest_verison.txt
-/publication.py
 /PyAR488.code-workspace
 /setup.py
+/test_publication.py
+/build_version.txt
+/build.py
+/build_publish.py
+/build_test.py
+/latest_version.txt
