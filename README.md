@@ -19,3 +19,5 @@ package to interact with AR488 interface boards, adds a bit of abstraction to si
 
 this module comes with the following instrument libraries:
     - HP8660D RF signal source
+    - HP3325A sweep signal generator
+    
