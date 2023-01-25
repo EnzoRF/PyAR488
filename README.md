@@ -1,6 +1,7 @@
 
-package to interact with AR488 interface boards, adds a bit of abstraction to simplify interactions. also can be passed as an argument cto custom classes to isentify instruments in your code like :
+package to interact with AR488 interface boards, adds a bit of abstraction to simplify interactions. also can be passed as an argument to custom classes to semplify instrument contorl in your code like :
 
+    from PyAR488.PyAR488 import AR488
     class HP3468A:
         def __init__(gpib_addrs:int, interface:AR488):
             self.address = gpib_addrs
@@ -26,8 +27,14 @@ NOTE : for custom instrument classes remember that the interface must be on the 
     
 This way you are shoure that the interface is always on the right address and the serial command to change is sent only if it is currently configured diferently (so no useless traffic on usb). all is handeled automaticaly in the PyAR488 module.
 
+In case of trouble... enable the Debung on object creation to see printed each and every command sent to the ionterface and your instruments! 
+just use:
+
+    from PyAR488.PyAR488 import AR488
+    my_interface = AR488('COM5', debug = True)
+
 this bundle comes with the following instrument libraries:
     - HP8660D RF signal source
     - HP3325A sweep signal generator
-    - HP8903A Audio analyzer (with usefull test scripts)
+    - HP8903A Audio analyzer (with usefull test scripts available on Github : https://github.com/Minu-IU3IRR/PyAR488)
     - more to come soon!
